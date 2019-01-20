@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/* ===================
+    - 画面共通
+=================== */
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #f9f8f6; }
+  @media (max-width: 550px) {
+    body .pc {
+      display: none; } }
+
+/* Header
+------------------------------------------------------------*/
+header #header_in {
+  padding-top: 15px;
+  padding-bottom: 4px;
+  text-align: center; }
+header .sp_logo .ttl_logo {
+  width: 120px; }
+header .sp_logo .contact_logo {
+  margin-top: 5px; }
+@media (min-width: 551px) {
+  header #header_in {
+    padding-top: 40px; }
+  header .sp_logo {
+    display: none; }
+  header .pc_menu_li {
+    margin: 0;
+    padding: 0; }
+    header .pc_menu_li li {
+      list-style: none;
+      margin: 5px 0 0 0;
+      padding: 0;
+      float: right;
+      padding-right: 10px; } }
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 11px;
+  font-size: 1.1rem; }
+  footer .border {
+    margin: 20px 0;
+    border-top: solid 1px #887f69; }
+  footer .kahki {
+    color: #887f69; }
+  @media (min-width: 551px) {
+    footer {
+      margin: 50px 0; }
+      footer .pagetop {
+        float: right; } }
+
+/* ===================
+    - TOP画面
+=================== */
+/* Main
+------------------------------------------------------------*/
+main {
+  text-align: center;
+  mim-width: 720px; }
+  main section {
+    display: block;
+    background-color: white;
+    text-align: left;
+    padding: 20px;
+    margin-top: 10px;
+    /* SHOPPING GUIDE */
+    /* ITEM SEARCH */ }
+    main section h6 {
+      color: #887f69;
+      font-weight: bold;
+      margin-bottom: 19px; }
+    main section img {
+      padding-bottom: 10px;
+      display: inline-block; }
+    main section p {
+      font-size: 12px;
+      font-size: 1.2rem;
+      margin: 0;
+      padding-bottom: 20px; }
+    main section p.subhd {
+      font-weight: bold;
+      color: #887f69;
+      margin: 0;
+      padding-bottom: 10px; }
+    main section .cardimg {
+      display: block;
+      margin: auto;
+      width: 100%; }
+    main section #page_link {
+      background-color: #887f69;
+      text-align: left;
+      width: 299px;
+      height: 45px; }
+    main section input {
+      background: url("../images/top/search_icon.png");
+      background-repeat: no-repeat;
+      display: inline-block;
+      line-height: 40px;
+      background-position: 95%;
+      background-color: #eeeeee;
+      color: #b5b5b5;
+      border: none;
+      width: 100%;
+      height: 30px;
+      font-style: italic;
+      font-size: 11px;
+      font-size: 1.1rem;
+      margin: 0; }
+    main section .item_search {
+      margin: 0; }
+  main .aside {
+    background-color: #887f69;
+    padding: 0px;
+    height: 45px;
+    display: flex;
+    /*親要素に記述してimgの位置を調整*/
+    justify-content: left;
+    /*親要素に記述してimgの位置を調整*/
+    align-items: center;
+    /*親要素に記述してimgの位置を調整*/ }
+    main .aside img {
+      display: inline-block;
+      padding: 5px 10px; }
+  main .info {
+    background-color: white;
+    height: 135px;
+    text-align: left; }
+    main .info .cption {
+      margin: 8px;
+      margin-left: 3px;
+      width: 143px;
+      height: 71px;
+      float: right;
+      font-size: 12px;
+      font-size: 1.2rem; }
+  main .info_img {
+    margin: 8px;
+    margin-right: 3px;
+    width: 135px; }
+  main .more {
+    display: block;
+    margin-top: 10px; }
+  main li {
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 200px;
+    list-style: none;
+    background-color: white;
+    height: 45px;
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    background-image: url("../images/top/next_icon_gray.png");
+    background-repeat: no-repeat;
+    background-position: 95%; }
+  main .img_arrow {
+    background-image: url("../images/top/next_icon.png");
+    background-repeat: no-repeat;
+    background-position: 95%; }
+  main .img_arrow_down {
+    background-image: url("../images/top/down_icon.png");
+    background-repeat: no-repeat;
+    background-position: 95%; }
+  @media (min-width: 551px) {
+    main .columns {
+      margin-left: 2%; }
+    main .sp_img {
+      display: none; }
+    main article {
+      display: -webkit-flex;
+      display: flex;
+      justify-content: space-between;
+      -webkit-flex-direction: colum;
+      flex-direction: colum; }
+    main .sidebar article {
+      display: block;
+      width: 219px; }
+    main section {
+      -webkit-flex: 1;
+      flex: 1;
+      margin-right: 5px;
+      min-width: 219px; }
+    main #item_search section {
+      padding: 0; }
+      main #item_search section input {
+        width: 80%;
+        margin: 10px 20px 20px 20px; }
+      main #item_search section img {
+        padding: 20px 0px 0px 20px; }
+    main .info {
+      background-color: white;
+      height: 265px;
+      text-align: center; }
+      main .info .cption {
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-align: left;
+        margin: 0;
+        width: 100%;
+        height: 55px;
+        float: none; }
+    main .info_img {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      width: 100%; }
+    main .more {
+      margin: auto;
+      margin-top: 10px;
+      text-align: center; }
+    main li {
+      min-width: 219px;
+      padding-top: 13px;
+      padding-right: 120px; } }
+
+/*# sourceMappingURL=sample.css.map */
