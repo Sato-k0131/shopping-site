@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/*  共通部分だけのcss */
 /* ===================
     - 画面共通
 =================== */
@@ -16,40 +16,14 @@ $gray : #b0b0b0;
 $gray2 : #eeeeee;
 $red : #9d1a2d;
 
-// ベースフォントサイズ：10px
 html {
-    font-size: 62.5%; 
+    font-size: 62.5%; // ベースフォントサイズ：10px
 }
 
 //rem変換用関数
 @mixin fontsize($size: 24, $base: 10) {  // 初期値設定
     font-size: $size + px;
     font-size: ($size / $base) * 1rem;
-}
-
-.txt_center{
-    text-align: center;
-}
-.txt_left{
-    text-align: left;
-}
-.txt_right{
-    text-align: right;
-}
-.txt-bld{
-    font-weight: bold; 
-}
-.mr_3{
-    margin-right: 3px;
-}
-.mr_5{
-    margin-right: 5px;
-}
-.mb_3{
-    margin-bottom: 3px;
-}
-.mb_10{
-    margin-bottom: 10px;
 }
 
 body {
@@ -146,54 +120,24 @@ main {
     text-align: center;
     mim-width: 720px;
 
-    .ttl{
-        display: block;
-        margin-bottom: 15px;
-    }
-    
-    .flxclms{
-        @include display-flex;         
-        @include flex-direction(colum);
-    }
-    
     section{
+        display: block;
         background-color: white; 
+        text-align: left;
+        padding: 20px;
         margin-top: 10px;
 
-        //NEW ITEMS
-        .item{
-            @include flex(1);
-            padding: 8px;
-            
-            img{
-                width: 95%;
-            }
-            
-            p{
-                margin: 0;
-                padding-bottom: 5px;
-            }
-            
-        }
-        
-
         // SHOPPING GUIDE
-        .guid{
-            padding: 20px;
-
-            img{
-                padding-bottom: 10px;
-                display: inline-block;
-            }
-
-        }
-
         h6{
             color: $khaki;
             font-weight: bold;
             margin-bottom: 19px;
         }
         
+        img{
+            padding-bottom: 10px;
+            display: inline-block;
+        }
         
         p{
             @include fontsize(12);
@@ -214,15 +158,7 @@ main {
             width: 100%;
         }
 
-        // NEW_ITEMS
-        .items{
-
-        }
         // ITEM SEARCH
-        .search{
-            padding: 20px;
-        }
-
         input{
             background: url("../images/top/search_icon.png");
             background-repeat: no-repeat;
@@ -238,7 +174,6 @@ main {
             @include fontsize(11);
             margin: 0;
         }
-
         .item_search{
             margin: 0;
         }
@@ -326,10 +261,6 @@ main {
     @media (min-width: 551px) {
         .sp_img{
             display:none;
-        }
-
-        .ttl{
-            margin-bottom: 10px;
         }
 
         article{
