@@ -21,12 +21,13 @@ html {
     font-size: 62.5%; 
 }
 
-//rem変換用関数
+// rem変換用関数
 @mixin fontsize($size: 24, $base: 10) {  // 初期値設定
     font-size: $size + px;
     font-size: ($size / $base) * 1rem;
 }
 
+// Text-Style
 .txt_center{
     text-align: center;
 }
@@ -39,6 +40,17 @@ html {
 .txt-bld{
     font-weight: bold; 
 }
+.txt_clr_khaki{
+    color: $khaki;
+}
+
+// Margin-Style
+.mg_auto{
+    margin: auto;
+}
+.mt_10{
+    margin-top: 10px;
+}
 .mr_3{
     margin-right: 3px;
 }
@@ -50,6 +62,43 @@ html {
 }
 .mb_10{
     margin-bottom: 10px;
+}
+.mb_20{
+    margin-bottom: 20px;
+}
+
+// Padding-Style
+.pt_10{
+    padding-top: 10px;
+}
+.pt_15{
+    padding-top: 15px;
+}
+.pt_20{
+    padding-top: 20px;
+}
+.pb_5{
+    padding-bottom: 5px;
+}
+.pb_10{
+    padding-bottom: 10px;
+}
+.pd_10{
+    padding: 10px;
+}
+.pd_20{
+    padding: 20px;
+}
+.pd_0{
+    padding: 0px;
+}
+
+// BackGroundColor-Style
+.bg_clr_wht{
+    background-color: white; 
+}
+.bg_clr_khaki{
+    background-color: $khaki;
 }
 
 body {
@@ -142,277 +191,251 @@ footer{
 =================== */
 /* Main
 ------------------------------------------------------------*/
-main {
+.ttl{
+    display: block;
+    margin-bottom: 15px;
+}
+
+//NEW ITEMS, POPULAR ITEMS
+.flx_item{
+    @include display-flex;         
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+
+}
+
+.item{
+    @include flex(1);
+    padding: 4px;
+    @include box-sizing(border-box);
+    min-width: 50%;
+    
+    img{
+        width: 100%;
+    }
+    
+    p{
+        margin: 0;
+        padding-bottom: 5px;
+        @include fontsize(11);
+    }
+    
+}
+
+
+// SHOPPING GUIDE
+.flx_guid{
+    @include display-flex;         
+    @include flex-direction(column);
+}
+.guid{
+    img{
+        display: inline-block;
+    }
+
+    h6{
+        margin: 0;
+    }
+
+    p{
+        margin: 0;
+        @include fontsize(12);
+    }
+
+    .derimg{
+        max-width: 60%;
+    }
+
+    .cardimg{
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+}
+
+// SEARCH
+input{
+    background: url("../images/top/search_icon.png");
+    background-repeat: no-repeat;
+    display: inline-block; // インライン要素に幅と高さを設定できるように設定
+    line-height: 40px;  // 高さを設定
+    background-position: 95%;
+    background-color:$gray2;
+    color: #b5b5b5;
+    border: none;
+    width: 100%;
+    height: 30px;
+    font-style: italic;
+    @include fontsize(11);
+    margin: 0;
+}
+
+.item_search{
+    margin: 0;
+}
+
+// CATEGOIES
+.ctgres_li{
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 200px;
+    list-style: none;
+    background-color: white; 
+    height: 45px;
     text-align: center;
-    mim-width: 720px;
+    margin-bottom: 2px;
+    @include fontsize(12);
+    vertical-align:middle;
+    background-image: url("../images/top/next_icon_gray.png");
+    background-repeat: no-repeat;
+    background-position: 95%;
+}
+
+.img_arrow{
+    background-image: url("../images/top/next_icon.png");
+    background-repeat: no-repeat;
+    background-position: 95%;
+}
+
+.img_arrow_down{
+    background-image: url("../images/top/down_icon.png");
+    background-repeat: no-repeat;
+    background-position: 95%;
+}
+
+// ABOUT
+.info{
+    height: 135px;
+
+    .cption{
+        margin: 8px;
+        margin-left: 3px;
+        width: 143px;
+        height: 71px;
+        float: right;
+        @include fontsize(12);
+    }
+
+}
+
+.info_img{
+    margin: 8px;
+    margin-right: 3px;
+    width: 135px;
+}
+
+.more{
+    display: block;
+    margin-top: 10px;
+}
+
+.pglnk, .ctgres, .about, .shopinfo{
+    height: 45px;
+     img{
+        padding: 17px 10px;
+    }
+}
+    
+    
+// PC
+@media (min-width: 550px) {
+    .sp_img{
+        display:none;
+    }
 
     .ttl{
-        display: block;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
-    
-    .flxclms{
-        @include display-flex;         
-        @include flex-direction(colum);
-    }
-    
-    section{
-        background-color: white; 
-        margin-top: 10px;
 
-        //NEW ITEMS
-        .item{
-            @include flex(1);
-            padding: 8px;
-            
-            img{
-                width: 95%;
-            }
-            
-            p{
-                margin: 0;
-                padding-bottom: 5px;
-            }
-            
-        }
-        
-
-        // SHOPPING GUIDE
-        .guid{
-            padding: 20px;
-
-            img{
-                padding-bottom: 10px;
-                display: inline-block;
-            }
-
-        }
-
-        h6{
-            color: $khaki;
-            font-weight: bold;
-            margin-bottom: 19px;
-        }
-        
-        
+    // NEW ITEMS, POPULAR ITEMS
+    .item{
+        padding: 8px;
+        min-width: 33%;
+                
         p{
             @include fontsize(12);
-            margin:0;
-            padding-bottom: 20px;    
         }
-        
-        p.subhd{
-            font-weight: bold;
-            color: $khaki;
-            margin:0;
-            padding-bottom: 10px;
-        }
-        
-        .cardimg{
-            display: block;
-            margin: auto;
-            width: 100%;
-        }
+    }
 
-        // NEW_ITEMS
-        .items{
+    // SHOPPING_GUID
+    .flx_guid{
+        @include flex-direction(row);
+    }
+    
+    .guid{
+        @include box-sizing(border-box);
+        @include flex(1);
+        margin-right: 5px;
+        margin-top: 0px;
+        max-width: 50%;
+    }
 
-        }
-        // ITEM SEARCH
-        .search{
-            padding: 20px;
-        }
-
-        input{
-            background: url("../images/top/search_icon.png");
-            background-repeat: no-repeat;
-            display: inline-block; // インライン要素に幅と高さを設定できるように設定
-            line-height: 40px;  // 高さを設定
-            background-position: 95%;
-            background-color:$gray2;
-            color: #b5b5b5;
-            border: none;
-            width: 100%;
-            height: 30px;
-            font-style: italic;
-            @include fontsize(11);
-            margin: 0;
-        }
-
-        .item_search{
-            margin: 0;
-        }
-
-  }
-   // section
 
     /* サイドメニュー共通 */
-    .aside{
-        background-color: $khaki;
-        padding: 0px;
-        height: 45px;
-        display: flex; /*親要素に記述してimgの位置を調整*/
-        justify-content: left; /*親要素に記述してimgの位置を調整*/
-        align-items: center; /*親要素に記述してimgの位置を調整*/
+    .columns{
+         margin-left: 3%;
+    }        
 
-        // 各タイトル画像
-        img{
-            display: inline-block;
-            padding: 5px 10px;
+    .sidebar{
+       display:block; /* サイドメニューだけflex解除 */
+    }
+
+    // ITEM SEARCH
+    .search{
+        padding: 0;
+        margin-top: 0;
+
+        input{
+            width: 80%;
+            margin: 10px 20px 20px 20px;
+            
         }
-    
+        
+        img {
+            padding: 20px 0px 0px 20px;
+        }
     }
 
     // CATEGOIES
-    li{
-        box-sizing: border-box;
-        padding: 10px;
-        padding-top: 15px;
-        padding-left: 0;
-        padding-right: 200px;
-        list-style: none;
-        background-color: white; 
-        height: 45px;
-        text-align: center;
-        margin-bottom: 2px;
-        @include fontsize(12);
-        vertical-align:middle;
-        background-image: url("../images/top/next_icon_gray.png");
-        background-repeat: no-repeat;
-        background-position: 95%;
-    }
-
-    .img_arrow{
-        background-image: url("../images/top/next_icon.png");
-        background-repeat: no-repeat;
-        background-position: 95%;
-    }
-    
-    .img_arrow_down{
-        background-image: url("../images/top/down_icon.png");
-        background-repeat: no-repeat;
-        background-position: 95%;
+    .ctgres_li{
+        padding-top: 13px;
+        padding-right: 120px;
     }
 
     // ABOUT
     .info{
         background-color: white;
-        height: 135px;
-        text-align: left;
+        height: 265px;
+        text-align: center;
         
         .cption{
-            margin: 8px;
-            margin-left: 3px;
-            width: 143px;
-            height: 71px;
-            float: right;
-            @include fontsize(12);
-        }
-    
-    }
-    
-    .info_img{
-        margin: 8px;
-        margin-right: 3px;
-        width: 135px;
-    }
-    
-    .more{
-        display: block;
-        margin-top: 10px;
-    }
-
-    // Main PC
-    @media (min-width: 551px) {
-        .sp_img{
-            display:none;
-        }
-
-        .ttl{
-            margin-bottom: 10px;
-        }
-
-        article{
-            //SHOPPING GUIDE
-            @include display-flex;           // 親要素にdisplay-flex指定
-            justify-content: space-between;  // 各アイテムを均等に配置し最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる
-            @include flex-direction(colum);  // colum:横並び
-        
-            section{
-                //SHOPPING GUIDE
-                @include flex(1);
-                margin-right: 5px;
-                min-width: 219px;
-           }
-
-        }
-
-
-        /* サイドメニュー共通 */
-        .columns{
-             margin-left: 2%;
-        }        
-
-        .sidebar article{
-           display:block; /* サイドメニューだけflex解除 */
-           width: 219px;
-        }
-
-        // ITEM SEARCH
-        #item_search section{
-            padding: 0;
-
-            input{
-                width: 80%;
-                margin: 10px 20px 20px 20px;
-                
-            }
-            
-            img {
-                padding: 20px 0px 0px 20px;
-            }
-        }
-
-        // CATEGOIES
-        li{
-            min-width: 219px;
-            padding-top: 13px;
-            padding-right: 120px;
-        }
-
-        // ABOUT
-        .info{
-            background-color: white;
-            height: 265px;
-            text-align: center;
-            
-            .cption{
-                box-sizing: border-box;
-                padding: 0 10px;
-                text-align:left;
-                margin: 0;
-                width: 100%;
-                height: 55px;
-                float: none;
-            }
-        }
-    
-        .info_img{
             box-sizing: border-box;
+            padding: 0 10px;
+            text-align:left;
             margin: 0;
-            padding: 10px;
-            text-align: center;
             width: 100%;
+            height: 55px;
+            float: none;
         }
-
-        .more{
-            margin: auto;
-            margin-top: 10px;
-            text-align: center;
-        }
-        
     }
-    // Main PC
+
+    // SHOP_INFO
+    .info_img{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .more{
+        margin: auto;
+        margin-top: 10px;
+        text-align: center;
+    }
     
 }
-// Main
