@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* ===================
+    - 商品一覧ページ,商品詳細ページ
+=================== */
+
+/* Header
+------------------------------------------------------------*/
+// パンくずリスト
+.bread{
+    border-radius: 3px;
+    height: 34px;
+
+    p{
+        min-width: 60%;
+        margin-bottom: 0px;
+        @include fontsize(11);
+        vertical-align: sub;
+    }
+        
+
+    // HOME画像
+    .homeimg{
+        background: url("../images/list/home_icon.png");
+        width: 12px;
+        height: 11px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        line-height: 11px;  // 高さを設定
+        background-position: 5%;
+    }
+}
+
+// Header画像
+.hd_img{
+    display: block;
+    width: 100%;
+}
+
+/* 商品一覧ページ Main
+------------------------------------------------------------*/
+// NEXT, BACK
+.btn{
+    display: block;
+    font-weight: 600;
+    width: 121px;
+    height: 40px;
+    line-height: 40px;
+}
+.btnL{
+    float: left;
+}
+.btnR{
+    float: right;
+}
+
+/* 商品詳細ページ Main
+------------------------------------------------------------*/
+// 詳細メイン
+.itemdetail{
+    @include fontsize(14);
+    padding: 10px;
+
+    h5{
+        margin-bottom: 0px;    
+    }
+    
+    // サブサムネイル
+    .flx_subimg{
+        @include display-flex;
+        // @include justify-content(space-between);
+        @include flex-wrap(wrap);
+        list-style: none;
+    }
+    .subimg{
+        max-width: 19.2%;
+    }
+
+    // テーブル    
+    .dtlinf_tbl{
+        @include fontsize(12);
+        width:100%;
+        border-collapse: collapse;
+        
+        th, td{
+            border: solid 1px $beige;     
+            padding: 12px;
+        }
+        
+        .thd{
+            min-width: 60px;
+        }
+    }
+    
+    // PRICE
+    .yen{
+        @include fontsize(22);
+    }
+    .prce{
+        float: right;
+        margin-bottom: 0;
+        padding-top: 8px;
+        position: relative;
+        right: 70px;
+    }
+
+    // Quantity
+    input{
+        border: 1px solid $beige;
+        margin-left: 40px;
+        border-radius: 0px;
+        width: 140px;
+    }
+    
+}
+
+// ライン各種
+.line_lime{
+    width: 100%;
+    // margin: 20px 0;
+    border-top: solid 1px $lime;
+}
+
+.line_khaki{
+    width: 100%;
+    // margin: 20px 0;
+    border-top: solid 1px $khaki;
+}
+
+
+// PC
+@media (min-width: 550px) {
+
+/* Header
+------------------------------------------------------------*/
+    // パンくずリスト
+    .homeimg{
+        line-height: 10px;  // 高さを設定
+        background-position: 1.5%;
+    }
+    
+/* 商品詳細ページ Main
+------------------------------------------------------------*/
+// 詳細メイン
+    .itemdetail{
+        padding: 50px;
+    
+        .main{
+            width: 64%;
+            margin-right: 2px;
+            float: left;
+        }
+
+        // サブサムネイル
+        .flx_subimg{
+            @include flex-direction(row);
+            @include flex-wrap(wrap);
+        }
+
+        .sub{
+            width: 35%;
+            float: right;    
+        }
+        .subimg{
+            display: inline-block;
+            margin-right: 5px;
+            max-width: 47.5%;
+            // max-height: 20%;
+
+        }
+        .prce{
+            right: 20px;
+        }
+     
+         .prc_lft{
+             float: left;
+         }
+         
+         .prc_rt{
+             position: relative;
+             top: 10px;
+         }
+    }
+    
+    .clearfix::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+        
+
+    
+}
+
+// SP
+@media (max-width: 550px) {
+    .mg_RL10{
+        margin-right: 10px;
+        margin-left: 10px;
+    } 
+}
+

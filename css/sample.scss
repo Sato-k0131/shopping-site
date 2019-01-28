@@ -1,105 +1,14 @@
 @charset "utf-8";
+@import "compass";
+@import 'common';
+@import 'list';
 
-/* ===================
-    - 画面共通
-=================== */
+/* =============================
+    - TOP画面、各画面共通
+============================= */
 
 /* Base
 ------------------------------------------------------------*/
-@import "compass";
-
-$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
-$base : #f9f8f6;
-$khaki : #887f69;
-$beige : #e2ddd4;
-$gray : #b0b0b0;
-$gray2 : #eeeeee;
-$red : #9d1a2d;
-
-// ベースフォントサイズ：10px
-html {
-    font-size: 62.5%; 
-}
-
-// rem変換用関数
-@mixin fontsize($size: 24, $base: 10) {  // 初期値設定
-    font-size: $size + px;
-    font-size: ($size / $base) * 1rem;
-}
-
-// Text-Style
-.txt_center{
-    text-align: center;
-}
-.txt_left{
-    text-align: left;
-}
-.txt_right{
-    text-align: right;
-}
-.txt-bld{
-    font-weight: bold; 
-}
-.txt_clr_khaki{
-    color: $khaki;
-}
-
-// Margin-Style
-.mg_auto{
-    margin: auto;
-}
-.mt_10{
-    margin-top: 10px;
-}
-.mr_3{
-    margin-right: 3px;
-}
-.mr_5{
-    margin-right: 5px;
-}
-.mb_3{
-    margin-bottom: 3px;
-}
-.mb_10{
-    margin-bottom: 10px;
-}
-.mb_20{
-    margin-bottom: 20px;
-}
-
-// Padding-Style
-.pt_10{
-    padding-top: 10px;
-}
-.pt_15{
-    padding-top: 15px;
-}
-.pt_20{
-    padding-top: 20px;
-}
-.pb_5{
-    padding-bottom: 5px;
-}
-.pb_10{
-    padding-bottom: 10px;
-}
-.pd_10{
-    padding: 10px;
-}
-.pd_20{
-    padding: 20px;
-}
-.pd_0{
-    padding: 0px;
-}
-
-// BackGroundColor-Style
-.bg_clr_wht{
-    background-color: white; 
-}
-.bg_clr_khaki{
-    background-color: $khaki;
-}
 
 body {
     background-color: $base;
@@ -206,10 +115,12 @@ footer{
 }
 
 .item{
-    @include flex(1);
+    @include flex(inherit);
     padding: 4px;
     @include box-sizing(border-box);
-    min-width: 50%;
+    width: 49.5%;
+    min-width: auto;
+    margin-bottom: 3px;
     
     img{
         width: 100%;
@@ -256,7 +167,7 @@ footer{
 }
 
 // SEARCH
-input{
+.search input{
     background: url("../images/top/search_icon.png");
     background-repeat: no-repeat;
     display: inline-block; // インライン要素に幅と高さを設定できるように設定
@@ -354,7 +265,10 @@ input{
     // NEW ITEMS, POPULAR ITEMS
     .item{
         padding: 8px;
-        min-width: 33%;
+        flex: inherit;
+        width: 33%;
+        min-width: auto;
+        margin-bottom: 3px;
                 
         p{
             @include fontsize(12);
