@@ -73,6 +73,11 @@
     }
     .subimg{
         max-width: 19.2%;
+        margin-bottom: 0px;
+        
+        img{
+            max-width: 100%;
+        }
     }
 
     // テーブル    
@@ -143,12 +148,29 @@
 // 詳細メイン
     .itemdetail{
         padding: 50px;
-    
-        .main{
-            width: 64%;
-            margin-right: 2px;
-            float: left;
+        
+        .flx_item_pc{
+            @include display-flex;
         }
+
+        .main{
+            width: 70%;
+
+             img{
+                 width:100%;
+                 box-sizing: border-box;
+             };
+             
+        }
+
+         ul:nth-child(5){
+             margin-right: 0px;
+         }
+
+        .sub{
+            width: 30%;
+        }
+
 
         // サブサムネイル
         .flx_subimg{
@@ -156,17 +178,22 @@
             @include flex-wrap(wrap);
         }
 
-        .sub{
-            width: 35%;
-            float: right;    
-        }
         .subimg{
-            display: inline-block;
-            margin-right: 5px;
-            max-width: 47.5%;
-            // max-height: 20%;
+            display: block;
+            margin-left: 21px;
+            margin-right: 0px;
+            margin-bottom: 13px;
+            max-width: 50%;
+            
+            
+            img{
+                max-width: 100%;
+                width: 70px;
+            }
 
         }
+        
+        // PRICE
         .prce{
             right: 20px;
         }

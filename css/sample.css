@@ -74,6 +74,9 @@ html {
 .mr_5 {
   margin-right: 5px; }
 
+.mr_10 {
+  margin-right: 10px; }
+
 .mb_0 {
   margin-bottom: 0px; }
 
@@ -215,7 +218,10 @@ html {
     flex-wrap: wrap;
     list-style: none; }
   .itemdetail .subimg {
-    max-width: 19.2%; }
+    max-width: 19.2%;
+    margin-bottom: 0px; }
+    .itemdetail .subimg img {
+      max-width: 100%; }
   .itemdetail .dtlinf_tbl {
     font-size: 12px;
     font-size: 1.2rem;
@@ -260,22 +266,32 @@ html {
   ------------------------------------------------------------*/
   .itemdetail {
     padding: 50px; }
+    .itemdetail .flx_item_pc {
+      display: -webkit-flex;
+      display: flex; }
     .itemdetail .main {
-      width: 64%;
-      margin-right: 2px;
-      float: left; }
+      width: 70%; }
+      .itemdetail .main img {
+        width: 100%;
+        box-sizing: border-box; }
+    .itemdetail ul:nth-child(5) {
+      margin-right: 0px; }
+    .itemdetail .sub {
+      width: 30%; }
     .itemdetail .flx_subimg {
       -webkit-flex-direction: row;
       flex-direction: row;
       -webkit-flex-wrap: wrap;
       flex-wrap: wrap; }
-    .itemdetail .sub {
-      width: 35%;
-      float: right; }
     .itemdetail .subimg {
-      display: inline-block;
-      margin-right: 5px;
-      max-width: 47.5%; }
+      display: block;
+      margin-left: 21px;
+      margin-right: 0px;
+      margin-bottom: 13px;
+      max-width: 50%; }
+      .itemdetail .subimg img {
+        max-width: 100%;
+        width: 70px; }
     .itemdetail .prce {
       right: 20px; }
     .itemdetail .prc_lft {
