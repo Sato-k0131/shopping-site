@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import "compass";
 @import 'common';
-@import 'list';
+@import 'item';
 
 /* =============================
     - TOP画面、各画面共通
@@ -192,12 +192,10 @@ footer{
     box-sizing: border-box;
     padding: 10px;
     padding-top: 15px;
-    padding-left: 0;
-    padding-right: 200px;
+    padding-left: 10;
     list-style: none;
     background-color: white; 
     height: 45px;
-    text-align: center;
     margin-bottom: 2px;
     @include fontsize(12);
     vertical-align:middle;
@@ -300,13 +298,16 @@ footer{
 
     // ITEM SEARCH
     .search{
-        padding: 0;
         margin-top: 0;
+        padding-bottom: 20px;
+        padding-top: 0;
+        padding-right: 0;
+        padding-left: 0;        
 
         input{
             width: 80%;
-            margin: 10px 20px 20px 20px;
-            
+            display: block;
+            margin: auto;
         }
         
         img {
@@ -317,7 +318,8 @@ footer{
     // CATEGOIES
     .ctgres_li{
         padding-top: 13px;
-        padding-right: 120px;
+        padding-right: 0px;
+        padding-left: 10px;
     }
 
     // ABOUT

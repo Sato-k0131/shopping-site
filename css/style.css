@@ -161,6 +161,14 @@ html {
 .bg_clr_beige2 {
   background-color: #f9f9f5; }
 
+.w_100 {
+  width: 100%; }
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both; }
+
 /* ===================
     - 商品一覧ページ,商品詳細ページ
 =================== */
@@ -218,6 +226,7 @@ html {
     flex-wrap: wrap;
     list-style: none; }
   .itemdetail .subimg {
+    cursor: pointer;
     max-width: 19.2%;
     margin-bottom: 0px; }
     .itemdetail .subimg img {
@@ -245,7 +254,8 @@ html {
     border: 1px solid #e2ddd4;
     margin-left: 40px;
     border-radius: 0px;
-    width: 140px; }
+    width: 140px;
+    max-width: 60%; }
 
 .line_lime {
   width: 100%;
@@ -285,9 +295,9 @@ html {
       flex-wrap: wrap; }
     .itemdetail .subimg {
       display: block;
-      margin-left: 21px;
+      margin-left: 11%;
       margin-right: 0px;
-      margin-bottom: 13px;
+      margin-bottom: 7%;
       max-width: 50%; }
       .itemdetail .subimg img {
         max-width: 100%;
@@ -298,16 +308,41 @@ html {
       float: left; }
     .itemdetail .prc_rt {
       position: relative;
-      top: 10px; }
-
-  .clearfix::after {
-    content: '';
-    display: block;
-    clear: both; } }
+      top: 10px; } }
 @media (max-width: 550px) {
   .mg_RL10 {
     margin-right: 10px;
     margin-left: 10px; } }
+@media (min-width: 926px) and (max-width: 1179px) {
+  .itemdetail .subimg {
+    margin-left: 5%; }
+    .itemdetail .subimg img {
+      max-width: 100%;
+      width: 60px; } }
+@media (min-width: 730px) and (max-width: 925px) {
+  .main {
+    min-width: 65%; }
+
+  .sub {
+    min-width: 35%; }
+
+  .itemdetail .subimg {
+    margin-left: 7%;
+    margin-bottom: 3%; }
+    .itemdetail .subimg img {
+      width: 50px; } }
+@media (min-width: 550px) and (max-width: 729px) {
+  .main {
+    min-width: 60%; }
+
+  .sub {
+    min-width: 40%; }
+
+  .itemdetail .subimg {
+    margin-left: 3%;
+    margin-bottom: 1%; }
+    .itemdetail .subimg img {
+      width: 42px; } }
 /* =============================
     - TOP画面、各画面共通
 ============================= */
@@ -443,12 +478,10 @@ footer {
   box-sizing: border-box;
   padding: 10px;
   padding-top: 15px;
-  padding-left: 0;
-  padding-right: 200px;
+  padding-left: 10;
   list-style: none;
   background-color: white;
   height: 45px;
-  text-align: center;
   margin-bottom: 2px;
   font-size: 12px;
   font-size: 1.2rem;
@@ -532,17 +565,22 @@ footer {
     /* サイドメニューだけflex解除 */ }
 
   .search {
-    padding: 0;
-    margin-top: 0; }
+    margin-top: 0;
+    padding-bottom: 20px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0; }
     .search input {
       width: 80%;
-      margin: 10px 20px 20px 20px; }
+      display: block;
+      margin: auto; }
     .search img {
       padding: 20px 0px 0px 20px; }
 
   .ctgres_li {
     padding-top: 13px;
-    padding-right: 120px; }
+    padding-right: 0px;
+    padding-left: 10px; }
 
   .info {
     background-color: white;
@@ -569,4 +607,4 @@ footer {
     margin-top: 10px;
     text-align: center; } }
 
-/*# sourceMappingURL=sample.css.map */
+/*# sourceMappingURL=style.css.map */

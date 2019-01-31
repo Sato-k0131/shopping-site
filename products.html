@@ -6,7 +6,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>APPLE BERRY -made width B- 商品詳細</title>
-  <meta name="description" content="APPLE BERRYのショッピングサイトです。商品詳細ページです。">
+  <meta name="description" content="APPLE BERRYのショッピングサイト商品詳細ページです。">
   <meta name="author" content="Satoko Ogino">
 
   <!-- Mobile Specific Metas
@@ -17,7 +17,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/sample.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- jQuery -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -64,103 +64,91 @@
   <main>
     <div class="container pd_0">
       <div class="row">
-        <div class="nine columns">
+        <div class="nine columns mw_545">
             <!-- パンくずリスト -->
             <div class="bread bg_clr_beige mg_RL10">
                 <p class="pl_40 txt_clr_khaki homeimg">HOME  /  カテゴリー名  /  商品名</p>
             </div>
             
-            <!-- 詳細 -->
+            <!-- 商品詳細 -->
             <div class="itemdetail bg_clr_wht mt_15">
-                <div>
-                    <h5 class="txt-bld ltr_spc_4">商品名がはいります</h5>
-                    <p class="txt_clr_gry mb_15">fa0001-91</p>
-                    <div class="line_lime"></div>
-                    <div class="mt_10 flx_item_pc">
-                        <div class="main">
-                            <img class="u-max-full-width" src="images/products/pro_img_01.jpg" alt="main">
-                        </div>
-                        <ul class="flx_subimg sub mb_5">
-                            <!--<li class="subimg mr_3 mb_0"><img class="u-max-full-width" src="images/products/pro_img_01.jpg" alt="sub"></li>-->
-                            <!--<li class="subimg mr_3 mb_0"><img class="u-max-full-width" src="images/products/pro_img_02.jpg" alt="sub"></li>-->
-                            <!--<li class="subimg mr_3 mb_0"><img class="u-max-full-width" src="images/products/pro_img_03.jpg" alt="sub"></li>-->
-                            <!--<li class="subimg mr_3 mb_0"><img class="u-max-full-width" src="images/products/pro_img_04.jpg" alt="sub"></li>-->
-                            <!--<li class="subimg mr_0 mb_0"><img class="u-max-full-width" src="images/products/pro_img_05.jpg" alt="sub"></li>-->
-                            <!--<li class="subimg mr_3 mb_0"><img class="u-max-full-width" src="images/products/gray_pro_img.jpg" alt="sub"></li>-->
-                            <!--<li class="subimg mr_3 mb_0"><img class="u-max-full-width" src="images/products/gray_pro_img.jpg" alt="sub"></li>-->
-                            <!--<li class="subimg mr_3 mb_0"><img class="u-max-full-width" src="images/products/gray_pro_img.jpg" alt="sub"></li>-->
-                            <!--<li class="subimg mr_3 mb_0"><img class="u-max-full-width" src="images/products/gray_pro_img.jpg" alt="sub"></li>-->
-                            <!--<li class="subimg mr_0 mb_0"><img class="u-max-full-width" src="images/products/gray_pro_img.jpg" alt="sub"></li>-->
-                            <li class="subimg mr_3"><img src="images/products/pro_img_01.jpg" alt="sub"></li>
-                            <li class="subimg mr_3"><img src="images/products/pro_img_02.jpg" alt="sub"></li>
-                            <li class="subimg mr_3"><img src="images/products/pro_img_03.jpg" alt="sub"></li>
-                            <li class="subimg mr_3"><img src="images/products/pro_img_04.jpg" alt="sub"></li>
-                            <li class="subimg"><img src="images/products/pro_img_05.jpg" alt="sub"></li>
-                            <li class="subimg mr_3"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
-                            <li class="subimg mr_3"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
-                            <li class="subimg mr_3"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
-                            <li class="subimg mr_3"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
-                            <li class="subimg"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
-                        </ul>
+              <h5 class="txt-bld ltr_spc_4">商品名がはいります</h5>
+              <p class="txt_clr_gry mb_15">fa0001-91</p>
+              <div class="line_lime"></div>
+              <div class="mt_10 flx_item_pc">
+                  <div id="display_img" class="main">
+                      <img class="u-max-full-width" src="images/products/pro_img_01.jpg" alt="main">
+                  </div>
+                  <ul id="list_img" class="flx_subimg sub mb_5">
+                      <li class="subimg mr_3"><img src="images/products/pro_img_01.jpg" alt="sub"></li>
+                      <li class="subimg mr_3"><img src="images/products/pro_img_02.jpg" alt="sub"></li>
+                      <li class="subimg mr_3"><img src="images/products/pro_img_03.jpg" alt="sub"></li>
+                      <li class="subimg mr_3"><img src="images/products/pro_img_04.jpg" alt="sub"></li>
+                      <li class="subimg"><img src="images/products/pro_img_05.jpg" alt="sub"></li>
+                      <li class="subimg mr_3"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
+                      <li class="subimg mr_3"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
+                      <li class="subimg mr_3"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
+                      <li class="subimg mr_3"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
+                      <li class="subimg"><img src="images/products/gray_pro_img.jpg" alt="sub"></li>
+                  </ul>
+              </div>
+              <div class="line_lime"></div>
+              <div>
+                  <img class="pt_15 pb_15" src="images/products/title_color.png" alt="COLOR/SIZE">
+                  <table class="dtlinf_tbl mg_auto txt_clr_khaki">
+                      <tr>
+                          <td class="bg_clr_beige2 txt_center">&nbsp;</td>
+                          <td class="bg_clr_beige2 txt_center">カラー１</td>
+                          <td class="bg_clr_beige2 txt_center">カラー２</td>
+                      </tr>
+                      <tr>
+                          <td class="bg_clr_beige2 txt_center">サイズ</td>
+                          <td class="txt_center">□</td>
+                          <td class="txt_center">□</td>
+                      </tr>
+                  </table>
+              </div>
+              <div class="clearfix">
+                <div class="prc_lft">
+                    <div class="line_lime line_half mt_15"></div>
+                    <div class="w_100">
+                      <img class="mt_20" src="images/products/title_price.png" alt="PRICE">
+                      <p class="prce"><span class="txt_clr_pink">￥</span><span class="yen txt_clr_pink txt-italic">1,000 </span>(tax in)</p>
                     </div>
-                    <div class="line_lime"></div>
-                    <div>
-                        <img class="pt_15 pb_15" src="images/products/title_color.png" alt="COLOR/SIZE">
-                        <table class="dtlinf_tbl mg_auto txt_clr_khaki">
-                            <tr>
-                                <td class="bg_clr_beige2 txt_center">&nbsp;</td>
-                                <td class="bg_clr_beige2 txt_center">カラー１</td>
-                                <td class="bg_clr_beige2 txt_center">カラー２</td>
-                            </tr>
-                            <tr>
-                                <td class="bg_clr_beige2 txt_center">サイズ</td>
-                                <td class="txt_center">□</td>
-                                <td class="txt_center">□</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="clearfix">
-                      <div class="prc_lft">
-                          <div class="line_lime line_half mt_15"></div>
-                          <img class="mt_20" src="images/products/title_price.png" alt="PRICE">
-                          <p class="prce"><span class="txt_clr_pink">￥</span><span class="yen txt_clr_pink txt-italic">1,000 </span>(tax in)</p>
-                          <div class="line_lime line_half mt_15"></div>
-                          <img class="mt_20" src="images/products/title_quantity.png" alt="Quantity">
-                          <input type="text" class="mb_10">
-                      </div>
-                      <div class="line_lime mb_15 sp_img"></div>
-                      <div class="prc_rt txt_center mt_5 mb_15">
-                        <img src="images/products/add_to_cart.png" alt="ADD TO CART">
-                      </div>
-                    </div>
-                    <div class="line_lime mb_15 pc"></div>
-                    <div>
-                      <h6 class="txt_clr_khaki txt-bld ltr_spc_1 mb_10">商品説明</h6>
-                      <div class="line_khaki mb_10"></div>
-                      <h6 class="txt_clr_khaki txt-bld mb_10">■説明タイトル説明タイトル説明タイトル説明タイトル</h6>
-                      <p class="txt_just">説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキ
-スト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト</p>
-                        <table class="dtlinf_tbl mg_auto txt_clr_khaki">
-                            <tr>
-                                <td class="bg_clr_beige2 thd txt_center">カラー</td>
-                                <td>説明文が入ります説明文がはいります</td>
-                            </tr>
-                            <tr>
-                                <td class="bg_clr_beige2 thd txt_center">サイズ</td>
-                                <td>説明文が入ります説明文がはいります</td>
-                            </tr>
-                        </table>
-
-                    </div>
-                    
+                    <div class="line_lime line_half mt_15"></div>
+                    <img class="mt_20" src="images/products/title_quantity.png" alt="Quantity">
+                    <input type="text" class="mb_10">
                 </div>
-                    
+                <div class="line_lime mb_15 sp_img"></div>
+                <div class="prc_rt txt_center mt_5 mb_15">
+                  <img class="u-max-full-width" src="images/products/add_to_cart.png" alt="ADD TO CART">
+                </div>
+              </div>
+              <div class="line_lime mb_15 pc"></div>
+              <div>
+                <h6 class="txt_clr_khaki txt-bld ltr_spc_1 mb_10">商品説明</h6>
+                <div class="line_khaki mb_10"></div>
+                <h6 class="txt_clr_khaki txt-bld mb_10">■説明タイトル説明タイトル説明タイトル説明タイトル</h6>
+                <p class="txt_just">説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキ
+スト説明テキステキスト説明テキスト説明テキスト説明テキスト</p>
+                  <table class="dtlinf_tbl mg_auto txt_clr_khaki">
+                      <tr>
+                          <td class="bg_clr_beige2 thd txt_center">カラー</td>
+                          <td>説明文が入ります説明文がはいります</td>
+                      </tr>
+                      <tr>
+                          <td class="bg_clr_beige2 thd txt_center">サイズ</td>
+                          <td>説明文が入ります説明文がはいります</td>
+                      </tr>
+                  </table>
+              </div>
             </div>
+            <!-- 商品詳細 -->
 
             <!-- 最近見た商品 -->
             <div class="ttl txt_center mg_RL10">
               <img class="sp_img pt_30" src="images/list/title_recent_pro.png" alt="recent_pro" srcset="images/list/title_recent_pro@2x.png 2x">
-              <img class="pc pt_20" src="images/list/recent_pro_pc.png" alt="recent_pro">
+              <img class="pc pt_20 w_100" src="images/list/recent_pro_pc.png" alt="recent_pro">
             </div>
             <article>
               <div class="flx_item mb_20 mg_RL10">
@@ -185,7 +173,7 @@
             <!-- SHOPPING GUIDE -->
             <div class="ttl txt_center mg_RL10">
               <img class="sp_img" src="images/top_sp/title_guide.png" alt="shopping_guid" srcset="images/top_sp/title_guide@2x.png 2x">
-              <img class="pc" src="images/top/title_guide.png" alt="shopping_guid">
+              <img class="pc w_100" src="images/top/title_guide.png" alt="shopping_guid">
             </div>
             <article>
               <div class="flx_guid mb_3 txt_left mg_RL10">
@@ -200,7 +188,7 @@
                 <div class="guid bg_clr_wht mt_10 pd_20">
                   <h6 class="txt-bld txt_clr_khaki pb_5">決済について</h6>
                   <p class="txt-bld txt_clr_khaki pb_5">■カード決済</p>
-                  <img class="cardimg pb_10" src="images/top/cards.png" alt="合計5,000円以上で送料無料">
+                  <img class="cardimg pb_10" src="images/top/cards.png" alt="VISA,MasterCard,JCB,AMEX,PayPal">
                   <p class="txt-bld txt_clr_khaki pb_5">■代金引換</p>
                   <p class="pb_10">代引き手数料がかかります</p>
                   <p class="txt-bld txt_clr_khaki pb_5">■銀行振込</p>
@@ -210,12 +198,12 @@
             </article>
         </div>
 
-        <div class="three columns sidebar">
+        <div class="three columns sidebar mw_162">
             <!-- ITEM SEARCH -->
             <article>
               <div class="search txt_left bg_clr_wht pd_20 mt_10 mg_RL10">
                 <img class="pd_10" src="images/top/itemserch.png" alt="ITEM SEARCH">
-                <span><input tyle="textarea" class="item_search" value="　Search...">
+                <input tyle="textarea" class="item_search" value="　Search...">
               </div>
             </article>
 
@@ -247,8 +235,8 @@
               <div class="about bg_clr_khaki mt_10 mg_RL10">
                 <img class="txt_left pd_10" src="images/top/about.png" alt="ABOUT">  
               </div>
-              <div class="info bg_clr_wht mg_RL10">
-                <img class="info_img" src="images/top/about_img.jpg" alt="ABOUT">
+              <div class="info bg_clr_wht clearfix mg_RL10">
+                <img class="info_img u-max-full-width" src="images/top/about_img.jpg" alt="ABOUT">
                 <p class="cption">お店の説明お店の説明お店の説明がはいりますお店の説明お店の説明お店の説明<img class="more" src="images/top/more_btn.png" alt="MORE"></p>
               </div>
             </article>
@@ -258,8 +246,8 @@
               <div class="shopinfo bg_clr_khaki mt_10 mg_RL10">
                 <img class="txt_left pd_10" src="images/top/shop_info.png" alt="SHOP_INFO">              
               </div>
-              <div class="info bg_clr_wht mg_RL10">
-                <img class="info_img" src="images/top/shopinfo_img.jpg" alt="ABOUT">
+              <div class="info bg_clr_wht clearfix mg_RL10">
+                <img class="info_img u-max-full-width" src="images/top/shopinfo_img.jpg" alt="SHOP_INFO">
                 <p class="cption">お店の説明お店の説明お店の説明がはいりますお店の説明お店の説明お店の説明<img class="more" src="images/top/more_btn.png" alt="MORE"></p>
               </div>
             </article>
@@ -287,6 +275,14 @@
     $(document).ready(function(){
       $("#down_btn").click(function(){
         $(".ul_toggle").slideToggle();
+      });
+    });
+    
+    // 商品詳細
+    $(window).load(function(){
+      $("#list_img img").click(function(){
+        var img_src = $(this).attr("src");
+        $("#display_img img").attr("src", img_src);
       });
     });
   </script>

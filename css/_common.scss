@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import "compass";
 
 /* ===================
     - 画面共通
@@ -195,3 +194,14 @@ html {
 .bg_clr_beige2{
     background-color: $beige2;
 }
+
+.w_100{
+    width: 100%;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+    
